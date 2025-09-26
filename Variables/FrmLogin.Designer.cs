@@ -41,7 +41,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Location = new System.Drawing.Point(42, 52);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(67, 20);
+            this.lblUser.Size = new System.Drawing.Size(57, 17);
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "Usuario";
             this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
@@ -50,7 +50,7 @@
             // 
             this.tbUser.Location = new System.Drawing.Point(42, 85);
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(315, 26);
+            this.tbUser.Size = new System.Drawing.Size(315, 23);
             this.tbUser.TabIndex = 1;
             // 
             // lblPassword
@@ -58,7 +58,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Location = new System.Drawing.Point(42, 138);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(95, 20);
+            this.lblPassword.Size = new System.Drawing.Size(81, 17);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Contraseña";
             this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
@@ -68,7 +68,7 @@
             this.tbPassword.Location = new System.Drawing.Point(42, 161);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(315, 26);
+            this.tbPassword.Size = new System.Drawing.Size(315, 23);
             this.tbPassword.TabIndex = 3;
             // 
             // btnLogin
@@ -93,7 +93,7 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 355);
             this.ControlBox = false;
@@ -104,11 +104,12 @@
             this.Controls.Add(this.tbUser);
             this.Controls.Add(this.lblUser);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmLogin";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
