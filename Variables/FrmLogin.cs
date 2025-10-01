@@ -15,12 +15,12 @@ namespace Variables
 
         private void lblUser_Click(object sender, EventArgs e)
         {
-            tbUser.Focus();
+           // tbUser.Focus();
         }
 
         private void lblPassword_Click(object sender, EventArgs e)
         {
-            tbPassword.Focus();
+           // tbPassword.Focus();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -29,6 +29,11 @@ namespace Variables
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Logear();
+        }
+
+        private void Logear()
         {
             if (Login(tbUser.Text, tbPassword.Text))
             {
