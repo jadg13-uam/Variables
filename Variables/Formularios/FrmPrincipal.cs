@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Variables.Formularios;
 
 namespace Variables
 {
@@ -25,6 +26,12 @@ namespace Variables
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void edadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmArreglo frm = new FrmArreglo();
+            frm.ShowDialog();
         }
     }
 }
