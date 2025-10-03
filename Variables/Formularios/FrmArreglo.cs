@@ -44,9 +44,22 @@ namespace Variables.Formularios
         {
             lblPromedio.Text = "Promedio: " + Arreglo.GetPromedioI();
             lblMayor.Text = "Mayor: " + Arreglo.GetEdadMaxima();
+            lblMenor.Text = "Menor: " + Arreglo.GetEdadMinima();
+            lblMayorDe.Text = "Mayor de edad: " + Arreglo.GetMayores();
+            lblMenorEdad.Text = "Menor de edad: " + Arreglo.GetMenores();
         }
 
         private void gbEdades_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMayor_Click(object sender, EventArgs e)
         {
 
         }

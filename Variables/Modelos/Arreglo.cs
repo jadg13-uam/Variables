@@ -48,5 +48,43 @@ namespace Variables.Modelos
             }
             return edadMaxima;
         }
+
+        public static int GetEdadMinima()
+        {
+            int edadMin = edades[0];
+            for(int i = 1; i < pos; i++)
+            {
+                if (edades[i] < edadMin) edadMin = edades[i];
+            }
+            return edadMin;
+
+        }
+        public static int GetMayores()
+        {
+            int edadMayor = 0;
+            foreach (int edad in edades)
+            {
+                if (edad >= 18 && edad < 120)
+                {
+                    edadMayor++ ;
+                }
+            }
+            return edadMayor;
+        }
+
+        public static int GetMenores()
+        {
+            int edadMenores = 0;
+            foreach (int edad in edades)
+            {
+                if (edad > 0 && edad < 18)
+                {
+                    edadMenores++ ;
+                }
+            }
+            return edadMenores;
+        }
+        
+
     }
 }
