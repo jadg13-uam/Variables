@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.gbEdades = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbEdad = new System.Windows.Forms.TextBox();
-            this.lbEdades = new System.Windows.Forms.ListBox();
-            this.lblPromedio = new System.Windows.Forms.Label();
-            this.lblMayor = new System.Windows.Forms.Label();
             this.lblMenor = new System.Windows.Forms.Label();
+            this.lblMayor = new System.Windows.Forms.Label();
+            this.lblPromedio = new System.Windows.Forms.Label();
+            this.lbEdades = new System.Windows.Forms.ListBox();
+            this.tbEdad = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbEdades.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,69 +46,78 @@
             this.gbEdades.Controls.Add(this.lbEdades);
             this.gbEdades.Controls.Add(this.tbEdad);
             this.gbEdades.Controls.Add(this.label1);
-            this.gbEdades.Location = new System.Drawing.Point(21, 12);
+            this.gbEdades.Location = new System.Drawing.Point(16, 10);
+            this.gbEdades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbEdades.Name = "gbEdades";
-            this.gbEdades.Size = new System.Drawing.Size(188, 374);
+            this.gbEdades.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbEdades.Size = new System.Drawing.Size(141, 304);
             this.gbEdades.TabIndex = 0;
             this.gbEdades.TabStop = false;
             this.gbEdades.Text = "Edades: 0";
+            this.gbEdades.Enter += new System.EventHandler(this.gbEdades_Enter);
             // 
-            // label1
+            // lblMenor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese la Edad";
+            this.lblMenor.Location = new System.Drawing.Point(13, 275);
+            this.lblMenor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMenor.Name = "lblMenor";
+            this.lblMenor.Size = new System.Drawing.Size(116, 19);
+            this.lblMenor.TabIndex = 5;
+            this.lblMenor.Text = "Menor: 0";
             // 
-            // tbEdad
+            // lblMayor
             // 
-            this.tbEdad.Location = new System.Drawing.Point(20, 48);
-            this.tbEdad.Name = "tbEdad";
-            this.tbEdad.Size = new System.Drawing.Size(155, 22);
-            this.tbEdad.TabIndex = 1;
-            this.tbEdad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbEdad_KeyDown);
+            this.lblMayor.Location = new System.Drawing.Point(14, 249);
+            this.lblMayor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMayor.Name = "lblMayor";
+            this.lblMayor.Size = new System.Drawing.Size(116, 19);
+            this.lblMayor.TabIndex = 4;
+            this.lblMayor.Text = "Mayor: 0";
+            // 
+            // lblPromedio
+            // 
+            this.lblPromedio.Location = new System.Drawing.Point(14, 219);
+            this.lblPromedio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPromedio.Name = "lblPromedio";
+            this.lblPromedio.Size = new System.Drawing.Size(116, 19);
+            this.lblPromedio.TabIndex = 3;
+            this.lblPromedio.Text = "Promedio: 0";
             // 
             // lbEdades
             // 
             this.lbEdades.FormattingEnabled = true;
-            this.lbEdades.ItemHeight = 16;
-            this.lbEdades.Location = new System.Drawing.Point(20, 76);
+            this.lbEdades.Location = new System.Drawing.Point(15, 62);
+            this.lbEdades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbEdades.Name = "lbEdades";
-            this.lbEdades.Size = new System.Drawing.Size(153, 180);
+            this.lbEdades.Size = new System.Drawing.Size(116, 147);
             this.lbEdades.TabIndex = 2;
             // 
-            // lblPromedio
+            // tbEdad
             // 
-            this.lblPromedio.Location = new System.Drawing.Point(18, 270);
-            this.lblPromedio.Name = "lblPromedio";
-            this.lblPromedio.Size = new System.Drawing.Size(155, 23);
-            this.lblPromedio.TabIndex = 3;
-            this.lblPromedio.Text = "Promedio: 0";
+            this.tbEdad.Location = new System.Drawing.Point(15, 39);
+            this.tbEdad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEdad.Name = "tbEdad";
+            this.tbEdad.Size = new System.Drawing.Size(117, 20);
+            this.tbEdad.TabIndex = 1;
+            this.tbEdad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbEdad_KeyDown);
             // 
-            // lblMayor
+            // label1
             // 
-            this.lblMayor.Location = new System.Drawing.Point(18, 306);
-            this.lblMayor.Name = "lblMayor";
-            this.lblMayor.Size = new System.Drawing.Size(155, 23);
-            this.lblMayor.TabIndex = 4;
-            this.lblMayor.Text = "Mayor: 0";
-            // 
-            // lblMenor
-            // 
-            this.lblMenor.Location = new System.Drawing.Point(17, 339);
-            this.lblMenor.Name = "lblMenor";
-            this.lblMenor.Size = new System.Drawing.Size(155, 23);
-            this.lblMenor.TabIndex = 5;
-            this.lblMenor.Text = "Menor: 0";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ingrese la Edad";
             // 
             // FrmArreglo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 398);
+            this.ClientSize = new System.Drawing.Size(484, 323);
             this.Controls.Add(this.gbEdades);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FrmArreglo";
             this.Text = "Arreglos";

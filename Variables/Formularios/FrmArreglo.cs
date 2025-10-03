@@ -23,20 +23,32 @@ namespace Variables.Formularios
             if (e.KeyCode == Keys.Enter)
             {
                 int edad = int.Parse(tbEdad.Text);
-                if (Arreglo.pos < 10) Arreglo.edad[Arreglo.pos++] = edad;
+                if (Arreglo.pos < 10) Arreglo.edades[Arreglo.pos++] = edad;
                 else MessageBox.Show("No se puede agregar mas elementos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                llenarListado();
+                LlenarListado();
+                MostrarCalculos();
             }
         }
 
-        public void llenarListado()
+        public void LlenarListado()
         {
             lbEdades.DataSource = null;
-            lbEdades.DataSource = Arreglo.edad;
+            lbEdades.DataSource = Arreglo.edades;
             lbEdades.Refresh();
             gbEdades.Text = "Edades: " + Arreglo.pos;
             tbEdad.Text = "";
             tbEdad.Focus();
+        }
+
+        public void MostrarCalculos()
+        {
+            lblPromedio.Text = "Promedio: " + Arreglo.GetPromedioI();
+            lblMayor.Text = "Mayor: " + Arreglo.GetEdadMaxima();
+        }
+
+        private void gbEdades_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
