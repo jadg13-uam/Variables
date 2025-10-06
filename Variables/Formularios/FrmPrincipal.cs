@@ -33,5 +33,11 @@ namespace Variables
             FrmArreglo frm = new FrmArreglo();
             frm.ShowDialog();
         }
+
+        private void matrizToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMatriz frm = new FrmMatriz();
+            frm.ShowDialog();
+        }
     }
 }
