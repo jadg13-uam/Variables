@@ -21,14 +21,28 @@ namespace Variables.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            int dato = 0;
+            try
+            {
+                dato = int.Parse(tbNumero.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("TIENE QUE SER UN NÚMERO ENTERO, imbécil", "ERROR", MessageBoxButtons.OK , MessageBoxIcon.Error);
+            }
             
-            int dato = int.Parse(tbNumero.Text);
-            mc.Agregar(dato);
+            if (mc.Agregar(dato))
+            {
+                dgvMatriz.DataSource = null;
+                dgvMatriz.DataSource = mc.getMatrizC();
+                dgvMatriz.Refresh();
 
-            dgvMatriz.DataSource = null;
-            dgvMatriz.DataSource = mc.getMatrizC();
-            dgvMatriz.Refresh();
-            MessageBox.Show("Agregado.");
+                MessageBox.Show("Agregado.");
+            }
+        }
+
+        private void dgvMatriz_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

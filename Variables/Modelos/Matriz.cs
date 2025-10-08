@@ -1,40 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Variables.Modelos
 {
     public class Matriz
     {
-        private const int fila = 2,  columna=2;
-        private int[,] matrizCuadrada = new int[fila, columna];
+        private const int FILA = 2,  COLUMNA = 2;
+        private int[,] matrizCuadrada = new int[FILA, COLUMNA];
         public int r { set; get; }
         public int c { set; get; }
+        
 
-        public void Agregar(int dato)
+        public bool Agregar(int dato)
         {
-            if (r == fila)
+            if (r < FILA && c < COLUMNA)
             {
-                if(c == columna)
+                if (c == 0)
                 {
-                    return;
+                    matrizCuadrada[r, c] = dato;
+                    c++;
                 }
+                else
+                {
+                    matrizCuadrada[r, c] = dato;
+                    c = 0;
+                    r++;
+                }
+                return true;
             }
-            
-            if(c == columna)
+            else
             {
-                c= 0;
-                r++;
+                MessageBox.Show("Ha llegado al límite de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
-            matrizCuadrada[r, c] = dato;
-             c++; 
         }
 
-        public int[,] getMatrizC()
+        public DataTable getMatrizC()
         {
-            return matrizCuadrada;
+            //Creo un datatable
+            DataTable dt = new DataTable();
+
+            //Crear las columnas del datatable
+            for (int i = 0; i < COLUMNA; i++)
+            {
+                dt.Columns.Add();
+            }
+
+            for (int row = 0; row < FILA; row++)
+            {
+                var nuevaFila = dt.NewRow();
+                for (int col = 0; col < COLUMNA; col++)
+                {
+                    nuevaFila[col] = matrizCuadrada[row, col];
+                }
+                dt.Rows.Add(nuevaFila);
+            }
+            return dt;
         }
     }
 }
