@@ -51,6 +51,7 @@ namespace Variables.Modelos
                 dt.Columns.Add();
             }
 
+            //Iterar sobre toda la matriz cuadrada y hacerla DataTable
             for (int row = 0; row < FILA; row++)
             {
                 var nuevaFila = dt.NewRow();

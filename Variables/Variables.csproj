@@ -58,6 +58,12 @@
     <Compile Include="Formularios\FrmMatriz.Designer.cs">
       <DependentUpon>FrmMatriz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmMatrizCuadrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmMatrizCuadrada.Designer.cs">
+      <DependentUpon>FrmMatrizCuadrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,7 @@
     <Compile Include="Modelos\Arreglo.cs" />
     <Compile Include="Modelos\Facultad.cs" />
     <Compile Include="Modelos\Matriz.cs" />
+    <Compile Include="Modelos\MatrizCuadrada.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\FrmArreglo.resx">
@@ -80,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmMatriz.resx">
       <DependentUpon>FrmMatriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMatrizCuadrada.resx">
+      <DependentUpon>FrmMatrizCuadrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
